@@ -5,12 +5,10 @@ using WindowsGame.Common.Data;
 
 namespace ConsoleApp
 {
-    class Program
+    public class ImportService
     {
-        static void Main(string[] args)
+        public void Process()
         {
-
-            Console.WriteLine("Hello World!");
         }
     }
 }
