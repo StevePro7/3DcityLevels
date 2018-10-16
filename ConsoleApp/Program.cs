@@ -23,8 +23,12 @@ namespace ConsoleApp
 
             using (Stream stream = new FileStream("steve.xml", FileMode.Create))
             {
+
                 System.Xml.Serialization.XmlSerializer serializer = new System.Xml.Serialization.XmlSerializer(typeof(LevelConfigData));
-                serializer.Serialize(stream, data);
+                //https://stackoverflow.com/questions/625927/omitting-all-xsi-and-xsd-namespaces-when-serializing-an-object-in-net
+                System.Xml.Serialization.XmlSerializerNamespaces ns = new System.Xml.Serialization.XmlSerializerNamespaces();
+                ns.Add(String.Empty, String.Empty);
+                serializer.Serialize(stream, data, ns);
             }
 
 
