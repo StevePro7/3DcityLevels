@@ -2,9 +2,9 @@
 
 namespace WindowsGame.Common.Data
 {
-	public struct LevelConfigData
+	public class LevelConfigData
 	{
-		public Byte LevelNo;
+		public String LevelNo;
 		public String LevelName;
 		public Boolean BonusLevel;
 		public UInt16 GridDelay;

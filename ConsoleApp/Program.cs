@@ -14,8 +14,12 @@ namespace ConsoleApp
             Functions functions = new Functions();
             var dict = functions.GetHeaders();
 
+            String line = "01,MOOT,true,250";
+            LevelConfigData data = functions.CsvToObj(dict, line);
 
-            LevelConfigData source = new LevelConfigData { LevelNo = 1 };
+            //functions.SerializeToXml(data);
+
+            LevelConfigData source = new LevelConfigData { LevelNo = "01" };
             Object obj = (Object)source;
             //LevelConfigData dst = new LevelConfigData();
 
@@ -48,21 +52,21 @@ namespace ConsoleApp
             //    Console.WriteLine(name);
             //}
 
-            char[] DELIM = new char[] { ',' };
-            string[] lines = File.ReadAllLines("Levels.csv");
+            //char[] DELIM = new char[] { ',' };
+            //string[] lines = File.ReadAllLines("Levels.csv");
 
-            string line = lines[0];
-            string[] headers = line.Split(DELIM);
+            //string line = lines[0];
+            //string[] headers = line.Split(DELIM);
 
-            IDictionary<string, int> dictionary = new Dictionary<string, int>();
-            for (int index = 0; index < headers.Length; index++)
-            {
-                string header = headers[index];
-                if (!dictionary.ContainsKey(header))
-                {
-                    dictionary.Add(header, index);
-                }
-            }
+            //IDictionary<string, int> dictionary = new Dictionary<string, int>();
+            //for (int index = 0; index < headers.Length; index++)
+            //{
+            //    string header = headers[index];
+            //    if (!dictionary.ContainsKey(header))
+            //    {
+            //        dictionary.Add(header, index);
+            //    }
+            //}
 
 
             Console.WriteLine("Hello World!");

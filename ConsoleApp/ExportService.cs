@@ -11,7 +11,7 @@ namespace ConsoleApp
         {
             LevelConfigData data = new LevelConfigData
             {
-                LevelNo = 1,
+                LevelNo = "01",
                 LevelName = "MOOT",
                 BonusLevel = false,
                 GridDelay = 200,
