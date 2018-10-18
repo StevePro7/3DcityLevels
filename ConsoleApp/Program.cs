@@ -11,13 +11,24 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
-            CsvToXml csvToXml = new CsvToXml();
-            var dict = csvToXml.GetHeaders();
+            XmlToCsv xmlToCsv = new XmlToCsv();
+            Type type = typeof(LevelConfigData);
+            string title = xmlToCsv.GetTitle(type);
+            var dict = xmlToCsv.GetHeaders(type);
+            string file = "01-MOOT.xml";
+            LevelConfigData data = xmlToCsv.XmlToObj(file);
+            string line = xmlToCsv.ObjToCsv(dict, data);
 
+            int x = 7;
+
+            /*
+            CsvToXml csvToXml = new CsvToXml();
+            var dict = csvToXml.GetHeaders("LevelNo,LevelName,BonusLevel,GridDelay,BulletMaxim");
             String line = "01,MOOT,true,250,10";
             LevelConfigData data = csvToXml.CsvToObj(dict, line);
-
             csvToXml.ObjToXml(data);
+            */
+
 
             //LevelConfigData source = new LevelConfigData { LevelNo = "01" };
             //Object obj = (Object)source;

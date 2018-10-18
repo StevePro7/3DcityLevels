@@ -11,17 +11,17 @@ namespace ClassLibrary.Helper
     {
         char[] DELIM = new char[] { ',' };
 
-        public IDictionary<string, int> GetHeaders()
+        public IDictionary<string, int> GetHeaders(string title)
         {
             IDictionary<string, int> dictionary = new Dictionary<string, int>();
 
-            FieldInfo[] fields = typeof(LevelConfigData).GetFields();
-            for (Byte index = 0; index < fields.Length; index++)
+            string[] headers = title.Split(DELIM);
+            for (int idx = 0; idx < headers.Length; idx++)
             {
-                FieldInfo field = fields[index];
-                dictionary.Add(field.Name, index);
+                string header = headers[idx];
+                dictionary.Add(header, idx);
             }
-
+           
             return dictionary;
         }
 
@@ -42,12 +42,6 @@ namespace ClassLibrary.Helper
                 var conv = Convert.ChangeType(item, field.FieldType);
                 fields[idx].SetValue(data, conv);
             }
-
-            //{
-            //    FieldInfo field = fields[idx];
-            //    string name = field.Name;
-            //}
-
 
             return data;
         }
