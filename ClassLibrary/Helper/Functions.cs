@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
+using System.Xml.Serialization;
 using WindowsGame.Common.Data;
 
 namespace ClassLibrary.Helper
@@ -9,6 +10,30 @@ namespace ClassLibrary.Helper
     public class Functions
     {
         char[] DELIM = new char[] { ',' };
+
+        public void ObjToXml(LevelConfigData data)
+        {
+            string fileName = String.Format("{0}-{1}.xml", data.LevelNo, data.LevelName);
+
+            // UTF8
+            // https://stackoverflow.com/questions/3862063/serializing-an-object-as-utf-8-xml-in-net
+
+            // Namespace
+            // https://stackoverflow.com/questions/625927/omitting-all-xsi-and-xsd-namespaces-when-serializing-an-object-in-net
+
+            using (Stream stream = new FileStream(fileName, FileMode.Create))
+            {
+                using (var writer = new StreamWriter(stream, System.Text.Encoding.UTF8))
+                {
+                    XmlSerializer serializer = new XmlSerializer(typeof(LevelConfigData));
+                    XmlSerializerNamespaces ns = new XmlSerializerNamespaces();
+                    ns.Add(String.Empty, String.Empty);
+
+                    serializer.Serialize(writer, data, ns);
+                }
+
+            }
+        }
 
         public LevelConfigData CsvToObj(IDictionary<string, int> dict, string line)
         {

@@ -9,7 +9,7 @@ namespace WindowsGame.Common.Data
 		public Boolean BonusLevel;
 		public UInt16 GridDelay;
 
-		//public Byte BulletMaxim;
+		public Byte BulletMaxim;
 		//public UInt16 BulletFrame;
 		//public UInt16 BulletShoot;
 
