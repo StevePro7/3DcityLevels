@@ -1,4 +1,5 @@
-﻿using System;
+﻿using ClassLibrary.Helper;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
@@ -10,6 +11,9 @@ namespace ConsoleApp
     {
         static void Main(string[] args)
         {
+            Functions functions = new Functions();
+            var dict = functions.GetHeaders();
+
 
             LevelConfigData source = new LevelConfigData { LevelNo = 1 };
             Object obj = (Object)source;

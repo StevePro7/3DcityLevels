@@ -15,12 +15,12 @@ namespace ConsoleApp
                 LevelName = "MOOT",
                 BonusLevel = false,
                 GridDelay = 200,
-                BulletMaxim = 5,
-                BulletFrame = 10,
-                BulletShoot = 50,
-                EnemySpawn = 1,
-                EnemyTotal = 5,
-                EnemyFrameDelay = 100,
+                //BulletMaxim = 5,
+                //BulletFrame = 10,
+                //BulletShoot = 50,
+                //EnemySpawn = 1,
+                //EnemyTotal = 5,
+                //EnemyFrameDelay = 100,
             };
 
             const string fileName = "steve.xml";
