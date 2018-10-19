@@ -1,23 +1,44 @@
 ﻿using ClassLibrary;
 using ClassLibrary.FileIO;
+using ClassLibrary.Helper;
 using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using WindowsGame.Common.Data;
 
 namespace AppCSV
 {
     public class Service
     {
         private readonly FileMgr fileMgr;
+        private readonly XmlToCsv xmlToCsv;
 
-        public Service(FileMgr fileMgr)
+        public Service(FileMgr fileMgr, XmlToCsv xmlToCsv)
         {
             this.fileMgr = fileMgr;
+            this.xmlToCsv = xmlToCsv;
         }
 
-        public void Process(LevelType type)
+        public void Process(LevelType levelType)
         {
-            fileMgr.CleanOuSubtDir(type);
+            IList<string> lines = new List<string>();
+            fileMgr.CleanOuSubtDir(levelType);
+
+            Type dataType = typeof(LevelConfigData);
+            string title = xmlToCsv.GetTitle(dataType);
+            lines.Add(title);
+
+            var dict = xmlToCsv.GetHeaders(dataType);
+            string[] files = fileMgr.GetFiles(levelType);
+            foreach (string file in files)
+            {
+                LevelConfigData data = xmlToCsv.XmlToObj(file);
+                string line = xmlToCsv.ObjToCsv(dict, data);
+                lines.Add(line);
+            }
+
+            string[] contents = lines.ToArray();
+            fileMgr.WriteCSV(levelType, contents);
         }
     }
 }

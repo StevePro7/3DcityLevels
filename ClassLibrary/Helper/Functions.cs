@@ -1,8 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.IO;
 using System.Reflection;
-using System.Xml.Serialization;
 using WindowsGame.Common.Data;
 
 namespace ClassLibrary.Helper
@@ -10,8 +8,6 @@ namespace ClassLibrary.Helper
     public class Functions
     {
         char[] DELIM = new char[] { ',' };
-
-       
 
         public IDictionary<string, int> GetHeaders()
         {

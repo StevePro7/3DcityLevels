@@ -10,21 +10,11 @@ namespace ClassLibrary.FileIO
         {
             string path = String.Format("{0}", OutDir);
             CleanOut(path);
-            //string[] files = Directory.GetFiles(path);
-            //foreach (string file in files)
-            //{
-            //    File.Delete(file);
-            //}
         }
-        public void CleanOuSubtDir(LevelType type)
+        public void CleanOuSubtDir(LevelType levelType)
         {
-            string path = String.Format("{0}/{1}", OutDir, type.ToString());
+            string path = String.Format("{0}/{1}", OutDir, levelType.ToString());
             CleanOut(path);
-            //string[] files = Directory.GetFiles(path);
-            //foreach (string file in files)
-            //{
-            //    File.Delete(file);
-            //}
         }
         private void CleanOut(string path)
         {
@@ -34,9 +24,22 @@ namespace ClassLibrary.FileIO
                 File.Delete(file);
             }
         }
+
+        public string[] GetFiles(LevelType levelType)
+        {
+            string path = String.Format("{0}/{1}", InpDir, levelType.ToString());
+            return Directory.GetFiles(path);
+        }
+
+        public void WriteCSV(LevelType levelType, string[] contents)
+        {
+            string path = String.Format("{0}/{1}/{1}.{2}", OutDir, levelType.ToString(), CsvExt);
+            File.WriteAllLines(path, contents);
+        }
+
         public const string InpDir = "Inp";
         public const string OutDir = "Out";
-        public const string EasySub = "Easy";
-        public const string HardSub = "Hard";
+        public const string CsvExt = ".csv";
+        public const string XmlExt = ".xml";
     }
 }
