@@ -39,6 +39,8 @@ namespace ClassLibrary.Helper
                 FieldInfo field = fields[idx];
                 string key = field.Name;
                 int value = dict[key];
+
+                // TODO pad LevelNo with '0' when build CSV
                 var conv = Convert.ChangeType(item, field.FieldType);
                 fields[idx].SetValue(data, conv);
             }
