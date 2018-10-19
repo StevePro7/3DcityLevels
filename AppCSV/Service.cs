@@ -19,10 +19,14 @@ namespace AppCSV
             this.xmlToCsv = xmlToCsv;
         }
 
+        public void Init()
+        {
+            fileMgr.CleanOutDir();
+        }
+
         public void Process(LevelType levelType)
         {
             IList<string> lines = new List<string>();
-            fileMgr.CleanOuSubtDir(levelType);
 
             Type dataType = typeof(LevelConfigData);
             string title = xmlToCsv.GetTitle(dataType);

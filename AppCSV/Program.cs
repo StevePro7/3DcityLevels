@@ -13,6 +13,7 @@ namespace AppCSV
             XmlToCsv xmlToCsv = new XmlToCsv();
 
             Service service = new Service(fileMgr, xmlToCsv);
+            service.Init();
             service.Process(LevelType.Easy);
 			service.Process(LevelType.Hard);
 
