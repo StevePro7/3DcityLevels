@@ -1,11 +1,12 @@
-﻿using System;
+﻿using ClassLibrary;
+using System;
 
 namespace WindowsGame.Common.Data
 {
 	public class LevelConfigData
 	{
         public String LevelNo;
-        public String LevelType;
+        public LevelType LevelType;
         public String LevelName;
         public Boolean BonusLevel;
         public UInt16 GridDelay;

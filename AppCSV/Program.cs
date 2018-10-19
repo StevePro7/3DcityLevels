@@ -14,8 +14,9 @@ namespace AppCSV
 
             Service service = new Service(fileMgr, xmlToCsv);
             service.Process(LevelType.Easy);
+			service.Process(LevelType.Hard);
 
-            Console.WriteLine("Hello World!");
+			Console.WriteLine("Hello World!");
         }
     }
 }
