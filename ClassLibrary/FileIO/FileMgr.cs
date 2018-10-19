@@ -51,7 +51,8 @@ namespace ClassLibrary.FileIO
 
         public void WriteXML(LevelType levelType, LevelConfigData data)
         {
-            string file = String.Format("{0}-{1}.{2}", data.LevelNo, levelType, XmlExt);
+            string levelNo = data.LevelNo.ToString().PadLeft(2, '0');
+            string file = String.Format("{0}-{1}.{2}", levelNo, levelType, XmlExt);
             string path = String.Format("{0}/{1}/{2}", OutDir, levelType, file);
                 
             // UTF8
