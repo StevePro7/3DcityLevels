@@ -33,7 +33,7 @@ namespace ClassLibrary.FileIO
 
         public void WriteCSV(LevelType levelType, string[] contents)
         {
-            string path = String.Format("{0}/{1}/{1}.{2}", OutDir, levelType.ToString(), CsvExt);
+            string path = String.Format("{0}/{1}.{2}", OutDir, levelType.ToString(), CsvExt);
             File.WriteAllLines(path, contents);
         }
 
