@@ -76,7 +76,7 @@ namespace ClassLibrary.FileIO
 
         public const string InpDir = "Inp";
         public const string OutDir = "Out";
-        public const string CsvExt = ".csv";
-        public const string XmlExt = ".xml";
+        public const string CsvExt = "csv";
+        public const string XmlExt = "xml";
     }
 }
