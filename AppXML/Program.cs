@@ -1,4 +1,6 @@
-﻿using System;
+﻿using ClassLibrary.FileIO;
+using ClassLibrary.Helper;
+using System;
 
 namespace AppXML
 {
@@ -6,6 +8,10 @@ namespace AppXML
     {
         static void Main(string[] args)
         {
+            FileMgr fileMgr = new FileMgr();
+            CsvToXml csvToXml = new CsvToXml();
+
+            Service service = new Service(fileMgr, csvToXml);
             Console.WriteLine("Hello World!");
         }
     }
