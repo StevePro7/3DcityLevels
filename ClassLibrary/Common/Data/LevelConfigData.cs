@@ -4,29 +4,25 @@ namespace WindowsGame.Common.Data
 {
 	public class LevelConfigData
 	{
-		public String LevelNo;
-		public String LevelName;
-		public Boolean BonusLevel;
-		public UInt16 GridDelay;
-
-		public Byte BulletMaxim;
-		//public UInt16 BulletFrame;
-		//public UInt16 BulletShoot;
-
-		//public Byte EnemySpawn;
-		//public Byte EnemyTotal;
-
-		//public UInt16 EnemyStartDelay;
-		//public UInt16 EnemyStartDelta;
-		//public UInt16 EnemyFrameDelay;
-		//public UInt16 EnemyFrameDelta;
-		//public UInt16 EnemyFrameMinim;
-		//public UInt16 EnemyFrameRange;
-
-		//public Byte EnemySpeedNone;
-		//public Byte EnemySpeedWave;
-		//public Byte EnemySpeedFast;
-
-		//public UInt16 ExplodeDelay;
-	}
+        public String LevelNo;
+        public String LevelType;
+        public String LevelName;
+        public Boolean BonusLevel;
+        public UInt16 GridDelay;
+        public Byte BulletMaxim;
+        public UInt16 BulletFrame;
+        public UInt16 BulletShoot;
+        public Byte EnemySpawn;
+        public Byte EnemyTotal;
+        public UInt16 EnemyStartDelay;
+        public UInt16 EnemyStartDelta;
+        public UInt16 EnemyFrameDelay;
+        public UInt16 EnemyFrameDelta;
+        public UInt16 EnemyFrameMinim;
+        public UInt16 EnemyFrameRange;
+        public Byte EnemySpeedNone;
+        public Byte EnemySpeedWave;
+        public Byte EnemySpeedFast;
+        public UInt16 ExplodeDelay;
+    }
 }
