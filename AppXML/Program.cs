@@ -10,9 +10,10 @@ namespace AppXML
         static void Main(string[] args)
         {
             FileMgr fileMgr = new FileMgr();
+            Validate validate = new Validate();
             CsvToXml csvToXml = new CsvToXml();
 
-            Service service = new Service(fileMgr, csvToXml);
+            Service service = new Service(fileMgr, csvToXml, validate);
             service.Init();
             service.Process(LevelType.Easy);
             service.Process(LevelType.Hard);

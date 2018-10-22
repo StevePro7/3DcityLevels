@@ -11,8 +11,9 @@ namespace AppCSV
         {
             FileMgr fileMgr = new FileMgr();
             XmlToCsv xmlToCsv = new XmlToCsv();
+            Validate validate = new Validate();
 
-            Service service = new Service(fileMgr, xmlToCsv);
+            Service service = new Service(fileMgr, xmlToCsv, validate);
             service.Init();
             service.Process(LevelType.Easy);
 			service.Process(LevelType.Hard);
