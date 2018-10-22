@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2041
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{0847006B-F2C9-486B-BAB0-C769C5A11D32}"
-EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{D44DB1B3-B91E-432A-9C17-6313A8585CDF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppToCSV", "AppToCSV\AppToCSV.csproj", "{C3F4945D-A782-454E-B524-CEC4FE94988B}"
@@ -17,10 +15,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{0847006B-F2C9-486B-BAB0-C769C5A11D32}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{0847006B-F2C9-486B-BAB0-C769C5A11D32}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{0847006B-F2C9-486B-BAB0-C769C5A11D32}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{0847006B-F2C9-486B-BAB0-C769C5A11D32}.Release|Any CPU.Build.0 = Release|Any CPU
 		{D44DB1B3-B91E-432A-9C17-6313A8585CDF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D44DB1B3-B91E-432A-9C17-6313A8585CDF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D44DB1B3-B91E-432A-9C17-6313A8585CDF}.Release|Any CPU.ActiveCfg = Release|Any CPU
