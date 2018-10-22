@@ -7,9 +7,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ConsoleApp", "ConsoleApp\Co
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ClassLibrary", "ClassLibrary\ClassLibrary.csproj", "{D44DB1B3-B91E-432A-9C17-6313A8585CDF}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppToCSV", "AppCSV\AppToCSV.csproj", "{C3F4945D-A782-454E-B524-CEC4FE94988B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppToCSV", "AppToCSV\AppToCSV.csproj", "{C3F4945D-A782-454E-B524-CEC4FE94988B}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppToXML", "AppXML\AppToXML.csproj", "{C2FA4948-11D9-4B45-AEFE-C0F8C14A5CD9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AppToXML", "AppToXML\AppToXML.csproj", "{C2FA4948-11D9-4B45-AEFE-C0F8C14A5CD9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
