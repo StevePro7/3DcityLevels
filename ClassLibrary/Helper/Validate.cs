@@ -36,6 +36,52 @@ namespace ClassLibrary.Helper
                     recommend);
             }
 
+            // 03. WrongEnemyFrameRange
+            const Byte mult = 2; //[1+1]
+            Int16 maxEnemyFrameRange = (Int16)(mult * data.EnemyFrameRange);
+            if (data.EnemyFrameDelay - maxEnemyFrameRange < data.EnemyFrameMinim)
+            {
+                Int16 recommend = (Int16)(data.EnemyFrameDelay - maxEnemyFrameRange);
+                return String.Format("{0} Delay:{1} MAX:{2} Minim:{3} RECOMMEND:{4}",
+                    ErrorType.WrongEnemyFrameRange,
+                    data.EnemyFrameDelay,
+                    maxEnemyFrameRange,
+                    data.EnemyFrameMinim,
+                    recommend);
+            }
+
+            // 04. WrongGridDelay
+            const UInt16 minGridDelay = 100;
+            const UInt16 maxGridDelay = 500;
+            if (data.GridDelay < minGridDelay || data.GridDelay > maxGridDelay)
+            {
+                return String.Format("{0} Choose between {1} and {2}", ErrorType.WrongGridDelay, minGridDelay, maxGridDelay);
+            }
+
+            // 05. WrongEnemySpawn
+            const Int16 minEnemySpawn = 1;
+            const Int16 maxEnemySpawn = 8;
+            if (data.EnemySpawn < minEnemySpawn || data.EnemySpawn > maxEnemySpawn)
+            {
+                return String.Format("{0} Choose between {1} and {2}", ErrorType.WrongEnemySpawn, minEnemySpawn, maxEnemySpawn);
+            }
+
+            // 06. WrongEnemyTotal
+            const Int16 minEnemyTotal = 1;
+            const Int16 maxEnemyTotal = 255;
+            if (data.EnemyTotal < minEnemyTotal || data.EnemyTotal > maxEnemyTotal)
+            {
+                return String.Format("{0} Choose between {1} and {2}", ErrorType.WrongEnemyTotal, minEnemyTotal, maxEnemyTotal);
+            }
+
+            // 04. WrongExplodeDelay
+            const UInt16 minExplodeDelay = 100;
+            const UInt16 maxExplodeDelay = 500;
+            if (data.ExplodeDelay < minExplodeDelay || data.ExplodeDelay > maxExplodeDelay)
+            {
+                return String.Format("{0} Choose between {1} and {2}", ErrorType.WrongExplodeDelay, minExplodeDelay, maxExplodeDelay);
+            }
+
             return error;
         }
         //public ErrorType ValidLevelConfigData(LevelConfigData data)

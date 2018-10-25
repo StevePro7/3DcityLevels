@@ -5,5 +5,10 @@
         None,
         SpeedNotHundred,
         WrongNumberBullets,
+        WrongEnemyFrameRange,
+        WrongGridDelay,
+        WrongEnemySpawn,
+        WrongEnemyTotal,
+        WrongExplodeDelay
     }
 }
