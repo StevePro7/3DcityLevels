@@ -10,8 +10,9 @@ namespace AppXML
         static void Main(string[] args)
         {
             Logger logger = new Logger();
-            logger.Initialize();
-            logger.Info("AppToXML");
+            String fileName = "AppToXML.dll.config";
+            logger.Initialize(fileName);
+            logger.Info(fileName);
 
             FileMgr fileMgr = new FileMgr();
             Validate validate = new Validate();

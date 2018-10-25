@@ -38,14 +38,17 @@ namespace AppXML
 
             Boolean isValid = true;
             IList<LevelConfigData> items = new List<LevelConfigData>();
+
             for (int index = 1; index < lines.Length; index++)
             {
                 string line = lines[index];
                 LevelConfigData data = csvToXml.CsvToObj(dict, line);
-                ErrorType errorType = validate.ValidLevelConfigData(data);
-                if (ErrorType.None != errorType)
+                //ErrorType errorType = validate.ValidLevelConfigData(data);
+                String error = validate.ValidLevelConfigData(data);
+                if (!String.IsNullOrEmpty(error))
                 {
-                    Console.WriteLine(file + " => " + errorType);
+                    String msg = String.Format("{0} [{1}] => {2}", file, data.LevelNo.ToString().PadLeft(2, '0'), error);
+                    logger.Error(msg);
                     isValid = false;
                 }
 

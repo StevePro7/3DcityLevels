@@ -9,11 +9,11 @@ namespace ClassLibrary.Helper
     {
         private static readonly ILog Log = LogManager.GetLogger(typeof(Logger));
 
-        public void Initialize()
+        public void Initialize(string fileName)
         {
             // https://stackify.com/making-log4net-net-core-work
             var logRepository = LogManager.GetRepository(Assembly.GetEntryAssembly());
-            XmlConfigurator.Configure(logRepository, new FileInfo("AppToCSV.dll.config"));
+            XmlConfigurator.Configure(logRepository, new FileInfo(fileName));
         }
 
         public void Debug(string message)

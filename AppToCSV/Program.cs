@@ -10,8 +10,9 @@ namespace AppCSV
         static void Main(string[] args)
         {
             Logger logger = new Logger();
-            logger.Initialize();
-            logger.Info("AppToCSV");
+            String fileName = "AppToCSV.dll.config";
+            logger.Initialize(fileName);
+            logger.Info(fileName);
 
             FileMgr fileMgr = new FileMgr();
             XmlToCsv xmlToCsv = new XmlToCsv();

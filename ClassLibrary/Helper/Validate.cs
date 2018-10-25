@@ -7,15 +7,28 @@ namespace ClassLibrary.Helper
 {
     public class Validate
     {
-        public ErrorType ValidLevelConfigData(LevelConfigData data)
+        public String ValidLevelConfigData(LevelConfigData data)
         {
+            String error = String.Empty;
+
             Byte speed = (Byte)(data.EnemySpeedNone + data.EnemySpeedWave + data.EnemySpeedFast);
             if (100 != speed)
             {
-                return ErrorType.SpeedNotHundred;
+                return String.Format("{0} Total:{1} None:{2} Wave:{3} Fast:{4}", ErrorType.SpeedNotHundred, speed, data.EnemySpeedNone, data.EnemySpeedWave, data.EnemySpeedFast);
             }
 
-            return ErrorType.None;
+
+            return error;
         }
+        //public ErrorType ValidLevelConfigData(LevelConfigData data)
+        //{
+        //    Byte speed = (Byte)(data.EnemySpeedNone + data.EnemySpeedWave + data.EnemySpeedFast);
+        //    if (100 != speed)
+        //    {
+        //        return ErrorType.SpeedNotHundred;
+        //    }
+
+        //    return ErrorType.None;
+        //}
     }
 }
