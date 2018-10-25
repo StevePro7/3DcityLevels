@@ -43,10 +43,12 @@ namespace AppCSV
             foreach (string file in files)
             {
                 LevelConfigData data = xmlToCsv.XmlToObj(file);
-                ErrorType errorType = validate.ValidLevelConfigData(data);
-                if (ErrorType.None != errorType)
+                //ErrorType errorType = validate.ValidLevelConfigData(data);
+                String error = validate.ValidLevelConfigData(data);
+                if (!String.IsNullOrEmpty(error))
                 {
-                    Console.WriteLine(file + " => " + errorType);
+                    String msg = String.Format("{0} [{1}] => {2}", file, data.LevelNo.ToString().PadLeft(2, '0'), error);
+                    logger.Error(msg);
                     isValid = false;
                 }
 

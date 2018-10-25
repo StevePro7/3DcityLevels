@@ -3,6 +3,7 @@
     public enum ErrorType
     {
         None,
-        SpeedNotHundred
+        SpeedNotHundred,
+        WrongNumberBullets,
     }
 }
