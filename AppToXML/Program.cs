@@ -9,11 +9,15 @@ namespace AppXML
     {
         static void Main(string[] args)
         {
+            Logger logger = new Logger();
+            logger.Initialize();
+            logger.Info("AppToXML");
+
             FileMgr fileMgr = new FileMgr();
             Validate validate = new Validate();
             CsvToXml csvToXml = new CsvToXml();
 
-            Service service = new Service(fileMgr, csvToXml, validate);
+            Service service = new Service(logger, fileMgr, csvToXml, validate);
             service.Init();
             service.Process(LevelType.Easy);
             service.Process(LevelType.Hard);

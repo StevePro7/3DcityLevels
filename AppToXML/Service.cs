@@ -9,12 +9,14 @@ namespace AppXML
 {
     public class Service
     {
+        private readonly Logger logger;
         private readonly FileMgr fileMgr;
         private readonly CsvToXml csvToXml = new CsvToXml();
         private readonly Validate validate;
 
-        public Service(FileMgr fileMgr, CsvToXml csvToXml, Validate validate)
+        public Service(Logger logger, FileMgr fileMgr, CsvToXml csvToXml, Validate validate)
         {
+            this.logger = logger;
             this.fileMgr = fileMgr;
             this.csvToXml = csvToXml;
             this.validate = validate;

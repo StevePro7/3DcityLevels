@@ -9,11 +9,15 @@ namespace AppCSV
     {
         static void Main(string[] args)
         {
+            Logger logger = new Logger();
+            logger.Initialize();
+            logger.Info("AppToCSV");
+
             FileMgr fileMgr = new FileMgr();
             XmlToCsv xmlToCsv = new XmlToCsv();
             Validate validate = new Validate();
 
-            Service service = new Service(fileMgr, xmlToCsv, validate);
+            Service service = new Service(logger, fileMgr, xmlToCsv, validate);
             service.Init();
             service.Process(LevelType.Easy);
 			service.Process(LevelType.Hard);
