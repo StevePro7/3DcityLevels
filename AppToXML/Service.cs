@@ -49,7 +49,7 @@ namespace AppXML
                 {
                     String msg = String.Format("{0} [{1}] => {2}", file, data.LevelNo.ToString().PadLeft(2, '0'), error);
                     logger.Error(msg);
-                    isValid = false;
+                   // isValid = false;
                 }
 
                 items.Add(data);
