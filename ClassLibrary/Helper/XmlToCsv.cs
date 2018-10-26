@@ -69,7 +69,7 @@ namespace ClassLibrary.Helper
                 string txt = val.ToString();
                 if (field.FieldType == typeof(Boolean))
                 {
-                    txt = txt.ToLower();
+                    txt = txt.ToUpper();
                 }
                 int lookd = dict[key];
                 items[lookd] = txt;
