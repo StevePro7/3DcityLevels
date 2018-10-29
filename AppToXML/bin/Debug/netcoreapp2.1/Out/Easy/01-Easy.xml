@@ -6,18 +6,18 @@
   <BonusLevel>false</BonusLevel>
   <GridDelay>350</GridDelay>
   <BulletMaxim>1</BulletMaxim>
-  <BulletFrame>100</BulletFrame>
-  <BulletShoot>500</BulletShoot>
+  <BulletFrame>150</BulletFrame>
+  <BulletShoot>900</BulletShoot>
   <EnemySpawn>1</EnemySpawn>
   <EnemyTotal>5</EnemyTotal>
   <EnemyStartDelay>5000</EnemyStartDelay>
   <EnemyStartDelta>0</EnemyStartDelta>
-  <EnemyFrameDelay>1000</EnemyFrameDelay>
+  <EnemyFrameDelay>2500</EnemyFrameDelay>
   <EnemyFrameDelta>0</EnemyFrameDelta>
-  <EnemyFrameMinim>500</EnemyFrameMinim>
-  <EnemyFrameRange>200</EnemyFrameRange>
+  <EnemyFrameMinim>0</EnemyFrameMinim>
+  <EnemyFrameRange>0</EnemyFrameRange>
   <EnemySpeedNone>100</EnemySpeedNone>
   <EnemySpeedWave>0</EnemySpeedWave>
   <EnemySpeedFast>0</EnemySpeedFast>
-  <ExplodeDelay>125</ExplodeDelay>
+  <ExplodeDelay>140</ExplodeDelay>
 </LevelConfigData>

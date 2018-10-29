@@ -5,9 +5,9 @@
   <LevelName>BONUS 1</LevelName>
   <BonusLevel>true</BonusLevel>
   <GridDelay>250</GridDelay>
-  <BulletMaxim>4</BulletMaxim>
-  <BulletFrame>80</BulletFrame>
-  <BulletShoot>120</BulletShoot>
+  <BulletMaxim>3</BulletMaxim>
+  <BulletFrame>150</BulletFrame>
+  <BulletShoot>300</BulletShoot>
   <EnemySpawn>2</EnemySpawn>
   <EnemyTotal>50</EnemyTotal>
   <EnemyStartDelay>1000</EnemyStartDelay>
@@ -19,5 +19,5 @@
   <EnemySpeedNone>90</EnemySpeedNone>
   <EnemySpeedWave>10</EnemySpeedWave>
   <EnemySpeedFast>0</EnemySpeedFast>
-  <ExplodeDelay>100</ExplodeDelay>
+  <ExplodeDelay>110</ExplodeDelay>
 </LevelConfigData>
