@@ -37,6 +37,12 @@ namespace ClassLibrary.Helper
             }
 
             // 03. WrongEnemySpeedWave
+            if (0 == data.EnemySpeedNone)
+            {
+                return "EnemySpeedNone must be greater than 0";
+            }
+
+            // 03. WrongEnemySpeedWave
             if (0 != data.EnemySpeedWave)
             {
                 String wave = EnemySpeed(data, 1);

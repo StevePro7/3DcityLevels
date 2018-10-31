@@ -5,6 +5,7 @@
         None,
         SpeedNotHundred,
         WrongNumberBullets,
+        EnemySpeedNone,
         EnemySpeedWave,
         EnemySpeedFast,
         WrongGridDelay,
