@@ -1,10 +1,9 @@
-﻿using ClassLibrary;
-using System;
+﻿using System;
 
 namespace WindowsGame.Common.Data
 {
-	public class LevelConfigData
-	{
+    public class LevelConfigData
+    {
         public String LevelNo;
         public String LevelType;
         public String LevelName;
@@ -24,6 +23,7 @@ namespace WindowsGame.Common.Data
         public Byte EnemySpeedNone;
         public Byte EnemySpeedWave;
         public Byte EnemySpeedFast;
+        public Byte EnemyRotates;
         public UInt16 ExplodeDelay;
     }
 }
