@@ -4,6 +4,7 @@
     {
         None,
         SpeedNotHundred,
+        MoverNotHundred,
         WrongNumberBullets,
         EnemySpeedNone,
         EnemySpeedWave,

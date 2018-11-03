@@ -17,6 +17,12 @@ namespace ClassLibrary.Helper
             {
                 return String.Format("{0} Total:{1} None:{2} Wave:{3} Fast:{4}", ErrorType.SpeedNotHundred, speed, data.EnemySpeedNone, data.EnemySpeedWave, data.EnemySpeedFast);
             }
+            // 01. MoversNotHundred
+            Byte mover = (Byte)(data.EnemyMoverNone + data.EnemyMoverHorz + data.EnemyMoverVert + data.EnemyMoverBoth);
+            if (100 != mover)
+            {
+                return String.Format("{0} Total:{1} None:{2} Horz:{3} Vert:{4} Both:{5}", ErrorType.SpeedNotHundred, speed, data.EnemyMoverNone, data.EnemyMoverHorz, data.EnemyMoverVert, data.EnemyMoverBoth);
+            }
 
             //02. WrongNumberBullets
             const Byte bulletFrames = 6;
