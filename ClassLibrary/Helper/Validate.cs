@@ -92,6 +92,14 @@ namespace ClassLibrary.Helper
                 return String.Format("{0} Choose between {1} and {2}", ErrorType.WrongEnemyTotal, minEnemyTotal, maxEnemyTotal);
             }
 
+            // 05. WrongEnemyVelocity.
+            const UInt16 minEnemyVelocity = 1;
+            const UInt16 maxEnemyVelocity = 9;
+            if (data.EnemyVelocity < minEnemyVelocity || data.EnemyVelocity > maxEnemyVelocity)
+            {
+                return String.Format("{0} Choose between {1} and {2}", ErrorType.WrongEnemyVelocity, minEnemyVelocity, maxEnemyVelocity);
+            }
+
             // 04. WrongExplodeDelay
             const UInt16 minExplodeDelay = 75;
             const UInt16 maxExplodeDelay = 125;

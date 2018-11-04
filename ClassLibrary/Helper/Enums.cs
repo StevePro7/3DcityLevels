@@ -12,6 +12,7 @@
         WrongGridDelay,
         WrongEnemySpawn,
         WrongEnemyTotal,
+        WrongEnemyVelocity,
         WrongExplodeDelay
     }
 }
